@@ -27,7 +27,10 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     '192.168.1.5',
-    'localhost'
+    'localhost',
+    '127.0.0.1',
+    '0.0.0.0',
+    '106.12.73.139',
 ]
 
 
@@ -61,7 +64,11 @@ ROOT_URLCONF = 'api.urls'
 CORS_ORIGIN_WHITELIST = (
  'http://127.0.0.1:4202',
  'http://localhost:4202',
+ 'http://106.12.73.139:7002',
+ 'http://106.12.73.139:8002',
+ 'http://106.12.73.139',
 )
+
 
 CORS_ALLOW_CREDENTIALS = True
 
@@ -90,7 +97,7 @@ WSGI_APPLICATION = 'api.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',  # 或者使用 mysql.connector.django
-        'HOST':'db',
+        'HOST':'127.0.0.1',
         'PORT':'3306',
         'NAME': 'ml_development',
         'USER': 'root',
