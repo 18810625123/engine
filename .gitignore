@@ -1,0 +1,8 @@
+/.idea
+gems/
+.DS_Store
+.cache/
+app/
+static/
+ml/ml_model_results
+*/__pycache__
